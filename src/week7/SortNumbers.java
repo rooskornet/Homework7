@@ -13,13 +13,14 @@ public class SortNumbers {
         String filename = "Opdracht3.txt";
         String line = null;
         BufferedReader reader = new BufferedReader(new FileReader(filename));
-        BufferedWriter writer = new BufferedWriter(new FileWriter("Output.txt"));
+        BufferedWriter writer = new BufferedWriter(new FileWriter("Output2.txt"));
         ArrayList list = new ArrayList();
 
         line = reader.readLine();
 
         while(line != null){
             String[] numbers = line.split("\\s");
+
 
             for(String a : numbers){
                 list.add(Double.parseDouble(a));
@@ -32,6 +33,7 @@ public class SortNumbers {
                 writer.write(o.toString() + " ");
             }
             writer.write("\n");
+            line = reader.readLine();
             list.clear();
 
 
